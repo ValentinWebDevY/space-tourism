@@ -1,0 +1,8 @@
+@mixin span-number-syle ($fw: bold, $op: 100%) {
+  font-weight: $fw;
+  opacity: $op;
+}
+
+@mixin title-color ($color: $white) {
+  color: $color;
+}

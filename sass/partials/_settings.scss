@@ -1,0 +1,153 @@
+:root {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-size: 1rem;
+
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+
+  background-color: $primary;
+  color: $white;
+}
+
+h1 {
+  font-size: 5rem;
+  padding: .5rem 0;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.heading4 {
+  font-size: 1.25rem;
+  font-family: "Bellefair", serif;
+  letter-spacing: .078rem;
+  color: black;
+}
+
+.heading5 {
+  font: {
+    size: 1rem;
+    weight: 400;
+    family: "Barlow Condensed", sans-serif;
+  }
+  @include title-color();
+  text-align: center;
+  letter-spacing: .169rem;
+
+  .number-title-style {
+    @include span-number-syle($op: 40%);
+  }
+}
+
+.sub-heading1 {
+  font-family: "Bellefair", serif;
+  font-size: 1.75rem;
+  color: $white;
+}
+
+.sub-heading2 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  letter-spacing: .147rem;
+}
+
+.nav-text {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-size: .875rem;
+  letter-spacing: .148rem;
+}
+
+.nav-text-burger {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1rem;
+  letter-spacing: .169rem;
+}
+
+p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: .938rem;
+  color: $secondary;
+  text-align: center;
+  line-height: 1.7rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  color: $white;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .heading1 {
+    font-size: 9.375rem;
+  }
+
+  h2 {
+    font-size: 5rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+  }
+
+  .heading4 {
+    font-size: 2rem;
+  }
+
+  .heading5 {
+    font-size: 1.25rem;
+    letter-spacing: .211rem;
+    text-align: left;
+    padding-left: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .heading1 {
+    font-size: 9.375rem;
+  }
+
+  h2 {
+    font-size: 6.25rem;
+  }
+
+  h3 {
+    font-size: 3.5rem;
+  }
+
+  .heading4 {
+    font-size: 2rem;
+  }
+
+  .heading5 {
+    font-size: 1.75rem;
+    letter-spacing: .297rem;
+  }
+
+  .nav-text {
+    font-size: 1rem;
+    letter-spacing: .169rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+  }
+}

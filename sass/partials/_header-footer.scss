@@ -1,0 +1,141 @@
+header {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 5rem;
+    padding: 0 1.5rem;
+
+    a {
+      width: 2.5rem;
+    }
+
+    ul {
+      position: fixed;
+      width: 65%;
+      top: 0;
+      right: -100%;
+      height: 100dvh;
+
+      padding-top: 25%;
+      background-color: $color-hover;
+      backdrop-filter: blur(25px);
+      transition: .8s;
+
+      li {
+        padding: 1rem 0 1.5rem 2rem;
+
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+
+    ul.active {
+      right: 0;
+    }
+  }
+
+  .hamburger {
+
+    .line-hamburger {
+      display: flex;
+      flex-direction: column;
+
+      width: 1.5rem;
+      height: 3px;
+      margin: 5px auto;
+      background-color: $secondary;
+      transition: .5s;
+    }
+  }
+
+  .hamburger.active .line-hamburger:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .line-hamburger:nth-child(2) {
+    opacity: 0
+  }
+
+  .hamburger.active .line-hamburger:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/* TABLET NAV */
+@media screen and (min-width: 768px) {
+header {
+  nav {
+    padding-right: 0;
+    a {
+      width: 3rem;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      position: static;
+      backdrop-filter: blur(0);
+      padding: 0 2rem;
+      height: 100%;
+      width: auto;
+
+      li {
+        padding: 0;
+
+        a.active {
+          padding-bottom: 1.9rem;
+          border-bottom: 2px solid $white;
+        }
+
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+  .hamburger {
+    display: none;
+  }
+}
+
+/* PC NAV */
+@media screen and (min-width: 992px) {
+  header {
+    padding-top: 2rem;
+
+    nav {
+      padding-left: 3rem;
+      height: 6rem;
+
+      ul {
+        width: 65%;
+        padding-left: 3rem;
+
+        backdrop-filter: blur(25px);
+
+        li {
+          span {
+            display: inline;
+          }
+
+          a {
+
+            &:hover {
+              padding-bottom: 2.3rem;
+              border-bottom: 2px solid $white;
+            }
+          }
+
+          a.active {
+            padding-bottom: 2.3rem;
+          }
+        }
+      }
+    }
+  }
+}

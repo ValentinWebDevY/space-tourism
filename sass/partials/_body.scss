@@ -1,0 +1,486 @@
+/* INDEX */
+
+#home-bg {
+  height: 100dvh;
+  background: url("assets/home/background-home-mobile.jpg") bottom no-repeat;
+  background-size: cover;
+
+  #home {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+
+    margin: 3rem 3rem 0 3rem;
+
+    .home-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .heading5 {
+        @include title-color($secondary);
+      }
+    }
+
+    .heading4 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-color: $white;
+      width: 9.375rem;
+      height: 9.175rem;
+      border-radius: 50%;
+
+      margin-top: 7rem;
+
+    }
+  }
+}
+
+/* END INDEX */
+
+/* DESTINATION */
+#destination {
+  background: url("assets/destination/background-destination-tablet.jpg") center no-repeat;
+  background-size: cover;
+  height: 100dvh;
+
+  .content-destination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    padding-top: 2rem;
+    margin: 0 10%;
+
+    img {
+      width: 10.625rem;
+    }
+
+    .destination-right {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 1rem;
+
+      .nav-destination {
+        display: flex;
+        gap: 2rem;
+
+        button {
+          background-color: transparent;
+          color: $secondary;
+          border: none;
+          padding: .5rem 0;
+        }
+
+        button.active {
+          color: white;
+          border-bottom: 3px solid $white;
+        }
+      }
+
+      hr {
+        margin: 1rem 0;
+        border: 1px solid #383B4B;
+        width: 100%;
+      }
+
+      .sub-heading1 {
+        padding: .5rem 0;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+/* END DESTINATION */
+
+/* CREW */
+#crew {
+  background: url("assets/crew/background-crew-tablet.jpg") center no-repeat;
+  background-size: cover;
+  height: 100dvh;
+
+}
+
+.crew-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  padding-top: 2rem;
+  margin: 0 10%;
+
+  img {
+    width: 10.625rem;
+    height: 13.875rem;
+    object-fit: cover;
+  }
+
+  hr {
+    margin: 1rem 0;
+    border: 1px solid #383B4B;
+    width: 100%;
+  }
+
+  .nav-crew {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding-bottom: 1rem;
+
+    span {
+      width: .625rem;
+      height: .625rem;
+      background-color: #383B4B;
+      border-radius: 50%;
+    }
+
+    span.active {
+      background-color: $white;
+    }
+  }
+
+  .crew-name-title {
+    text-align: center;
+
+    .heading4 {
+      color: $gray;
+      padding-bottom: .3rem;
+    }
+  }
+}
+
+/* END CREW */
+
+/* TECHNOLOGY */
+#technology {
+  background: url("assets/technology/background-technology-tablet.jpg") center no-repeat;
+  background-size: cover;
+  height: 100dvh;
+
+  .technology-container {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    margin-top: 2rem;
+    gap: 2rem;
+
+    .nav-technology {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 2.5rem;
+        height: 2.5rem;
+        color: $white;
+        border: 2px solid $gray-opacity-25;
+        border-radius: 50%;
+      }
+
+      span.active {
+        background-color: white;
+        color: black;
+      }
+    }
+
+    .technology-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .5rem;
+
+      margin: 0 2rem;
+
+      .nav-text {
+        color: $secondary;
+      }
+
+      h3 {
+        margin-bottom: .5rem;
+      }
+    }
+  }
+}
+
+/* END TECHNOLOGY */
+
+/* ===== RESPONSIVE TABLET ===== */
+@media screen and (min-width: 768px) {
+  /* INDEX */
+
+  #home-bg {
+    background: url("assets/home/background-home-mobile.jpg") center no-repeat;
+    background-size: cover;
+    height: 100dvh;
+
+    #home {
+      margin-right: 7rem;
+      margin-left: 7rem;
+      gap: 0;
+
+      .heading4 {
+        width: 15.125rem;
+        height: 15.125rem;
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  /* END INDEX */
+
+  /* DESTINATION */
+  #destination {
+    background: url("assets/destination/background-destination-desktop.jpg") center no-repeat;
+    background-size: cover;
+
+    .bottom-infos-destination {
+      display: flex;
+      gap: 5rem;
+    }
+  }
+  /* END DESTINATION */
+
+  /* CREW */
+  .crew-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 2rem;
+    grid-template-areas:
+      "statusName"
+      "bio"
+      "nav"
+      "img";
+
+    .crew-name-title {
+      grid-area: statusName;
+    }
+
+    p {
+      grid-area: bio;
+    }
+
+    .nav-crew {
+      grid-area: nav;
+    }
+
+    img {
+      grid-area: img;
+      width: 20rem;
+      height: 27rem;
+    }
+
+    hr {
+      display: none;
+    }
+  }
+  /* END CREW */
+
+  /* TECH */
+  #technology {
+
+    .technology-container {
+      #tech-img {
+        height: 19.375rem;
+      }
+
+      .nav-technology {
+        padding: 1rem 0;
+
+        span {
+          width: 3.75rem;
+          height: 3.75rem;
+        }
+      }
+
+      p {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+  /* END TECH */
+}
+
+/* ===== RESPONSIVE PC ===== */
+@media screen and (min-width: 992px) {
+  /* INDEX */
+  #home-bg {
+    background: url("assets/home/background-home-desktop.jpg") center no-repeat;
+    background-size: cover;
+    height: 100dvh;
+
+    #home {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-top: 5rem;
+
+      .home-content {
+        align-items: start;
+        width: 28.125rem;
+
+        .heading5 {
+          padding: 0;
+        }
+
+        p {
+          text-align: left;
+        }
+      }
+
+      .heading4 {
+
+        &:hover {
+          outline: 3rem solid $gray-opacity-25;
+          transition: .8s;
+        }
+      }
+    }
+  }
+  /* END INDEX */
+
+  /* DESTINATION */
+  #destination {
+    background: url("assets/destination/background-destination-desktop.jpg") center no-repeat;
+    background-size: cover;
+    height: 100dvh;
+
+    .heading5 {
+      padding-left: 5rem;
+    }
+
+    .content-destination {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 1rem 5rem;
+
+      img {
+        width: 27.813rem;
+      }
+
+      .destination-right {
+        align-items: start;
+
+        .nav-destination {
+          button {
+
+            &:hover {
+              border-bottom: 3px solid $gray;
+            }
+          }
+        }
+
+        p {
+          text-align: left;
+        }
+      }
+    }
+  }
+  /* END DESTINATION */
+
+  /* CREW */
+  #crew {
+    background: url("assets/crew/background-crew-desktop.jpg") center no-repeat;
+    background-size: cover;
+    height: 100dvh;
+
+    .heading5 {
+      padding-left: 9.5rem;
+    }
+
+    .crew-content {
+      gap: 0;
+      column-gap: 10rem;
+      justify-items: start;
+      grid-template-areas:
+      "statusName img"
+      "bio img"
+      "nav img";
+
+      .crew-name-title {
+        grid-area: statusName;
+        text-align: left;
+      }
+
+      p {
+        grid-area: bio;
+        text-align: left;
+      }
+
+      .nav-crew {
+        grid-area: nav;
+
+        span {
+
+          &:hover {
+            background-color: $gray;
+          }
+        }
+      }
+
+      img {
+        grid-area: img;
+      }
+    }
+  }
+  /* END CREW */
+
+  /* TECH */
+  #technology {
+    background: url("assets/technology/background-technology-desktop.jpg") center no-repeat;
+    background-size: cover;
+    height: 100dvh;
+
+    .heading5 {
+      padding-left: 5rem;
+    }
+
+    .technology-container {
+      grid-template-columns: 1fr 2fr 2fr;
+      margin: 5rem 5rem 2rem 5rem;
+      align-items: center;
+      grid-template-areas:
+      "left middle right";
+
+      #tech-img {
+        grid-area: right;
+        width: 25rem;
+        height: auto;
+      }
+
+      .nav-technology {
+        grid-area: left;
+        flex-direction: column;
+
+        span {
+          width: 5rem;
+          height: 5rem;
+
+          &:hover {
+            border-color: $white;
+          }
+        }
+      }
+
+      .technology-content {
+        grid-area: middle;
+        align-items: start;
+
+        h2, h3, p {
+          text-align: left;
+        }
+      }
+    }
+  }
+  /* END TECH */
+}
